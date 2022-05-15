@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import {FormGroup, FormControl, Validators} from "@angular/forms"
+import { ApiService } from 'src/app/servicios/api/api.service';
+import { FormGroup, FormControl, Validators } from "@angular/forms"
 
 @Component({
   selector: 'app-random',
@@ -9,9 +9,17 @@ import {FormGroup, FormControl, Validators} from "@angular/forms"
 })
 export class RandomComponent implements OnInit {
 
-  constructor() { }
+
+  coctailRandom:any;
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getRandom().subscribe(data=>this.coctailRandom=data.drinks);
   }
+showRandomCocktail():void{
+  this.apiService.getRandom().subscribe(data=>this.coctailRandom=data.drinks);
+  //console.log(this.coctailRandom); 
+}
+
 
 }

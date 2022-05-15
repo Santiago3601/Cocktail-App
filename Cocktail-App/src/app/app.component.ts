@@ -11,11 +11,5 @@ export class AppComponent implements OnInit {
   title = 'Cocktail-App';
     constructor(private http: HttpClient) { }
 
-  ngOnInit() {      
-    this.http.get<any>('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mAR').subscribe({
-        next: data => {
-            this.totalAngularPackages = data.total;
-        }
-    })
-}
+  ngOnInit() {}
 }
