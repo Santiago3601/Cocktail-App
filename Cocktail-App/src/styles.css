@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  /* background-color: #ff66a7 !important; */
+  /*  background-image: url(./assets/img/back-cocteles3.jpg); */
+  background-color: #be0b0b;
+  background-image: linear-gradient(#f53f67, rgb(240, 240, 40));
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+}
+
+.span-or {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+}
+.hr-or {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+footer.nb-footer {
+  margin-top: 120px;
+  background: #222;
+  border-top: 7px solid #7b3141;
+  width: 100%;
+}
+footer.nb-footer .about {
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1170px;
+  text-align: center;
+}
+footer.nb-footer .about p {
+  font-size: 13px;
+  color: #999;
+  margin-top: 30px;
+}
+footer.nb-footer .footer-info-single {
+  margin-top: 30px;
+}
+footer.nb-footer .footer-info-single .title {
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-left: 4px solid #7b3141;
+  padding-left: 5px;
+}
+footer.nb-footer .footer-info-single ul li a {
+  display: block;
+  color: #aaa;
+  padding: 2px 0;
+}
+footer.nb-footer .footer-info-single ul li a:hover {
+  color: #b78c33;
+}
+footer.nb-footer .footer-info-single p {
+  font-size: 13px;
+  line-height: 20px;
+  color: #aaa;
+}
+footer.nb-footer .copyright {
+  margin-top: 15px;
+  background: #111;
+  padding: 7px 0;
+  color: #999;
+}
+footer.nb-footer .copyright p {
+  margin: 0;
+  padding: 0;
+}

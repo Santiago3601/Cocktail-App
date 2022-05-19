@@ -1,8 +1,8 @@
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Cocktail app</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <div class="container">
+    <a class="navbar-brand"><img src="../../../assets/img/cocktail.png" /></a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
     <!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
@@ -18,53 +18,59 @@
                 </li>
             </ul>
         </div>-->
-    </div>
+  </div>
 </nav>
 <!-- Page content-->
 
 <div class="container">
-    <div class="text-center mt-5">
-        <h1>Random Cocktail Recepes Generator</h1>
-        <button class="btn btn-primary" (click)="showRandomCocktail()">New Cocktail</button>
-    </div>
+  <div class="text-center mt-5">
+    <h1>Random Cocktail Recepes Generator</h1>
+    <button class="btn btn-primary" (click)="showRandomCocktail()">
+      New Cocktail
+    </button>
+  </div>
 </div>
 
-
-<section *ngIf="coctailRandom"  class="section mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div *ngIf="coctailRandom">
-            <img alt="Web Studio" class="img-fluid" style="height: 300px;" src="{{coctailRandom[0].strDrinkThumb}}" />
-          </div>
+<section *ngIf="coctailRandom" class="section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngIf="coctailRandom" class="div-img">
+          <img
+            alt="Web Studio"
+            class="img-fluid"
+            style="height: 300px"
+            src="{{ coctailRandom[0].strDrinkThumb }}"
+          />
         </div>
-        <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
-          <div>
-            <h2>{{coctailRandom[0].strDrink}}</h2>
-            <p class="margin-top-s">{{coctailRandom[0].strInstructions}}</p>
-            <h5>Ingredients:</h5>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient1}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient2}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient3}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient4}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient5}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient6}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient7}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient8}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient9}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient10}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient11}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient12}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient13}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient14}}</p>
-            <p class="margin-top-s">{{coctailRandom[0].strIngredient15}}</p>
+      </div>
+      <div
+        class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0"
+      >
+        <div class="div-description-cocktails">
+          <h2>{{ coctailRandom[0].strDrink }}</h2>
+          <p class="margin-top-s">{{ coctailRandom[0].strInstructions }}</p>
+          <h5>Ingredients:</h5>
+          <div class="div-ingredients">
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient1 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient2 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient3 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient4 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient5 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient6 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient7 }}</p>
+            <br />
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient8 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient9 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient10 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient11 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient12 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient13 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient14 }}</p>
+            <p class="margin-top-s">{{ coctailRandom[0].strIngredient15 }}</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-
-
-  
-
+  </div>
+</section>
